@@ -15,7 +15,25 @@ filter_bags_by_config(bag_path=".", config_path="path/to/config.yaml") # filter 
 ```
 
 ### Config
-refer to config/config.yaml for more details.
+```yaml
+bag_patterns:
+  - "*E371*.bag" # bag contains E371
+
+filters:
+  - topic: "/mlog/logs/planning" # topic to watch
+    path: "entries" # path to the messages in the bag
+    pattern: '\[DBG\]\[\d+\]:\[lateral_decision_info\]\[json_str\]' # pattern to match
+    conditions:
+      - field: "lcStatus" # field to check
+        value: "none"
+        operator: "!="
+      - field: "lbStatus"
+        value: "none"
+        operator: "!="
+      - field: "lcValid"
+        value: true
+        operator: "=="
+```
 
 ### License
 
