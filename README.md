@@ -1,4 +1,4 @@
-## For filtering planning debug logs in ROS1 bag
+## For filtering debug logs in ROS1 bag
 
 ### Install
 ```shell
