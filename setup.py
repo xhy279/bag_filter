@@ -5,7 +5,7 @@ try:
 except ImportError:
     print("rosbag is not installed, please install it first.")
     exit(1)
-    
+
 setup(
     name="bag_filter",
     version="0.1.0",
@@ -21,7 +21,9 @@ setup(
     install_requires=[
         "pyyaml>=5.3.1"
     ],
+    license="GPL-3.0",
     classifiers=[
         'Environment :: ROS',
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     ]
 )
